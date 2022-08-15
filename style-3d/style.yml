@@ -1,0 +1,25 @@
+version: 8
+glyphs: https://maps.gsi.go.jp/xyz/noto-jp/{fontstack}/{range}.pbf
+sources:
+  unmiss:
+    type: raster
+    tiles:
+      - >-
+        https://pro-ags1.dfs.un.org/arcgis/rest/services/UNMISS_Custom_Basemap_CVW/MapServer/tile/{z}/{y}/{x}
+    attribution: UNMISS Basemap (for testing)
+    tileSize: 256
+  3d:
+    type: raster-dem
+    tiles:
+      - https://ubukawa.github.io/globalmap-el/rgb-el_2-7/{z}/{x}/{y}.png
+    attribution: Global Map Elevation ver. 2 (ISCGM)
+    tileSize: 512
+    maxzoom: 7
+    minzoom: 2
+layers:
+  - !!inc/file layers/UNMISS.yml
+  - !!inc/file layers/hills.yml
+terrain:
+  source: 3d
+  exaggeration: 1
+sprite: https://gsi-cyberjapan.github.io/gsivectortile-mapbox-gl-js/sprite/std
