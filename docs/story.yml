@@ -1,4 +1,4 @@
-style: https://ubukawa.github.io/unmiss-test/style.json
+style: style-3d.json
 title: What's In Blue
 subtitle: 2021-10
 byline: UN Vector Tile Toolkit
@@ -9,12 +9,18 @@ view:
   car:
     center: [21.91, 7.71]
     zoom: 4.84
+    bearing: 0
+    pitch: 15
   lakes:
     center: [33.9, -3.15]
-    zoom: 4.84
+    zoom: 4.5
+    bearing: 0
+    pitch: 15
   haiti:
     center: [-73.73, 19.25]
     zoom: 5.34
+    bearing: 0
+    pitch: 0
 chapters: 
   - id: c1
     alignment: right
