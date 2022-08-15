@@ -1,7 +1,7 @@
 import {
   YAML
-//} from "./YAML.js"
-} from "https://unvt.github.io/tell/YAML.js" //used absolute path so that html can work from file system
+} from "./YAML.js"
+//} from "https://unvt.github.io/tell/YAML.js" //used absolute path so that html can work from file system
 
 const style = href => {
   const e = document.createElement('link')
@@ -17,26 +17,26 @@ const script = src => {
 }
 
 const init = () => {
- style("https://unvt.github.io/tell/style.css") //used absolute path so that html can work from file system
- style("https://unvt.github.io/tell/maplibre-gl.css") //used absolute path so that html can work from file system
- script("https://unvt.github.io/tell/maplibre-gl.js") //used absolute path so that html can work from file system
- script("https://unvt.github.io/tell/intersection-observer.js") //used absolute path so that html can work from file system
- script("https://unvt.github.io/tell/scrollama.js") //used absolute path so that html can work from file system
-/*
+ //style("https://unvt.github.io/tell/style.css") //used absolute path so that html can work from file system
+ //style("https://unvt.github.io/tell/maplibre-gl.css") //used absolute path so that html can work from file system
+ //script("https://unvt.github.io/tell/maplibre-gl.js") //used absolute path so that html can work from file system
+ //script("https://unvt.github.io/tell/intersection-observer.js") //used absolute path so that html can work from file system
+ //script("https://unvt.github.io/tell/scrollama.js") //used absolute path so that html can work from file system
+
   for(let url of [
 'style.css',
-'maplibre-gl.css'
+'maplibre-gl@2.2.1/maplibre-gl.css'
   ]) {
     style(url)
   }
   for(let url of [
-'maplibre-gl.js',
+'maplibre-gl@2.2.1/maplibre-gl.js',
 'intersection-observer.js',
 'scrollama.js'
   ]) {
     script(url)
   }
-*/
+
 
   for(let id of ['map', 'story']) {
     const el = document.createElement('div')

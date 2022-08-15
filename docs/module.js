@@ -18,12 +18,12 @@ const script = src => {
 const init = () => {
   for(let url of [
 'style.css',
-'maplibre-gl.css'
+'maplibre-gl@2.2.1/maplibre-gl.css'
   ]) {
     style(url)
   }
   for(let url of [
-'maplibre-gl.js',
+'maplibre-gl@2.2.1/maplibre-gl.js',
 'intersection-observer.js',
 'scrollama.js'
   ]) {
